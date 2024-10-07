@@ -1,0 +1,233 @@
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+
+}
+
+/* Headings */
+h2 {
+  font-size: 1.5em;
+}
+label, p {
+  font-size: 12.5px;
+}
+
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.App-logo {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #fafbfb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.removed {
+  display: hidden;
+  z-index: -1;
+}
+
+.invisible {
+  opacity: 0.2;
+}
+
+/* General styles */
+.videoView {
+  width: 100%; /* Full width for better responsiveness */
+}
+.segmentOnClick {
+  position: relative;
+  float: left;
+  width: 200px;
+  margin: 2% 1%;
+  cursor: pointer;
+}
+
+.segmentOnClick p {
+  padding: 5px;
+  background-color: #007f8b;
+  color: #fff;
+  z-index: 2;
+  font-size: 12px;
+  margin: 0;
+}
+
+.segmentOnClick {
+  z-index: 0;
+}
+
+.segmentOnClick canvas {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+
+.segmentOnClick img {
+  width: 100%;
+  opacity: 1;
+}
+
+.flex-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: top;
+}
+/* Color picker styles */
+.color-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.colorButton {
+  cursor: pointer;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+.colorButton:hover {
+  transform: scale(1.5); /* Scale up on hover */
+}
+/* Container for the webcam */
+/* Webcam styles */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+/* Webcam styles */
+.videoView {
+  width: 100%;                  /* Full width for better responsiveness */
+  max-width: 400px;            /* Optional: limit max width for larger screens */
+  height: auto;                 /* Maintain aspect ratio */
+}
+/* Button styles */
+#webcamButton {
+  background-color: #007f8b;
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+video, canvas {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#webcamButton:hover {
+  background-color: #005f6b;
+  transform: scale(1.05);
+}
+
+/* Mobile styles */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .video-container {
+      flex-direction: column; /* Stack webcam and buttons vertically on mobile */
+  }
+
+  .color-picker {
+      flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .colorButton {
+      margin: 5px 0; /* Add margin for vertical spacing */
+  }
+
+  canvas {
+      width: 100%; /* Ensure canvas width is full */
+      height: auto; /* Auto height */
+      transform: rotate(90deg); /* Rotate canvas for vertical view */
+      transform-origin: left top; /* Set rotation origin to top left */
+  }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 15px;
+    color: white;
+}
+
+.menu-icon img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-bar input:focus {
+    outline: none;
+}
